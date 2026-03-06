@@ -1,0 +1,112 @@
+Act as a Senior Frontend Engineer and UX Architect. 
+
+Your task is to build a FULLY FUNCTIONAL "Universal AI Chat Interface" (Google Gemini–style clone) with ZERO build tools. 
+
+=============================
+CRITICAL TECH CONSTRAINTS
+============================= 
+
+1. ZERO-BUILD ARCHITECTURE
+- The entire app MUST be written in a SINGLE index.html file.
+- Use ONLY Vanilla JavaScript.
+- ❌ Do NOT use React, Vue, Svelte, Node.js, import/export, require, npm, Vite, or any build step. 
+
+2. SCRIPT SAFETY (Very Important)
+- Place the <script> tag ONLY at the VERY END of <body>.
+- Add a fallback loader:
+<div id="loading">Loading App...</div>
+- Hide the loader ONLY after JavaScript initializes.
+- This must prevent blank page issues on GitHub Pages. 
+
+3. MOBILE-FIRST & FULL SCREEN
+- The app MUST correctly fill the FULL PHONE SCREEN.
+- Input bar must ALWAYS be visible on mobile (keyboard safe).
+- ❌ Do NOT use h-screen + overflow-hidden combination.
+- Use min-h-screen and proper flex layout.
+- The UI must NOT break on Android Chrome / tablets. 
+
+=============================
+UI / DESIGN (Gemini Clone)
+============================= 
+
+- Clean, minimalist, white/light gray Gemini-style UI.
+- Use Tailwind CSS via CDN ONLY.
+- Layout:
+  • Left Sidebar: Chat history + New Chat
+  • Main Area: Chat messages
+  • Bottom: Floating / sticky input bar
+- Input Area Extensions (NEW):
+  • Include a "+" (Plus) button next to the text input field.
+  • Clicking the "+" button should toggle a hidden popover/menu with options to attach "Image", "Video", and "File".
+- Messages:
+  • User messages → right
+  • AI messages → left
+- Markdown + code blocks rendered properly. 
+
+=============================
+CORE FEATURES (MANDATORY)
+============================= 
+
+✔ OpenRouter API support
+✔ Endpoint: https://openrouter.ai/api/v1/chat/completions
+✔ Settings modal:
+  - OpenRouter API Key (password field)
+  - Model name (default: deepseek/deepseek-r1:free)
+✔ Use localStorage to persist:
+  - API key
+  - Model
+  - Chat history
+✔ Use marked.js (CDN) for Markdown rendering 
+
+=============================
+ADVANCED FEATURES (REQUIRED)
+============================= 
+
+📎 Media & File Attachment UI
+- Functional "+" button triggering a native file picker or mock attachment UI for selecting Images, Videos, and Files. Display the selected file names/thumbnails beautifully above the text input before sending.
+
+🌙 Dark Mode Toggle
+- Gemini-like dark theme
+- Preference saved in localStorage 
+
+🧹 Chat Management
+- Delete chat
+- Rename chat 
+
+📱 Mobile Sidebar Toggle
+- Sidebar slides in/out on mobile
+- Hamburger button visible on small screens 
+
+🧠 System Prompt Editor
+- User can define a system prompt
+- Stored per chat or globally 
+
+⌨ Typing Animation
+- AI responses appear letter-by-letter 
+
+🔴 Streaming Response
+- Stream tokens from OpenRouter API
+- Show real-time AI typing (not fake delay) 
+
+🛡 Stability
+- No runtime crashes
+- Defensive checks everywhere
+- No undefined access errors 
+
+=============================
+DELIVERABLE
+============================= 
+
+- Output ONLY ONE COMPLETE index.html
+- Code must be COPY–PASTE READY
+- Must WORK immediately on GitHub Pages
+- Must NOT produce a blank page
+- Must NOT hide input on mobile 
+
+Before final output:
+- Double-check mobile layout
+- Double-check script placement
+- Double-check the "+" attachment button and its hidden menu UI.
+- Double-check no imports/build syntax exists 
+
+Now generate the COMPLETE index.html.
